@@ -18,7 +18,7 @@ jobs:
         with:
           filter: "new"
 
-      - name: Check Outputs
+      - name:  Output
         run: |
           echo "${{ steps.memer.outputs.meme }}"
           echo "${{ steps.memer.outputs.title }}"
