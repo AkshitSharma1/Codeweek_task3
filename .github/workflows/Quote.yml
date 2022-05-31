@@ -1,0 +1,12 @@
+name: Quote
+on: push
+
+jobs:
+  my-job:
+    name: Greeting Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      run: |
+        echo Hello there!
+
