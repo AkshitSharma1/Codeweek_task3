@@ -23,4 +23,7 @@ jobs:
       with:
         stringArray: ${{ steps.modified_files.outputs.files_modified }}
     - name: Print modified files
-      run: echo '${{ steps.modified_files_list.outputs.stringList }}'
+      
+      run:  echo "Modified files are"
+            echo '${{ steps.modified_files_list.outputs.stringList }}'
+           
