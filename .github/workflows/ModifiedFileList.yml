@@ -1,11 +1,11 @@
-//Prints name of all the modified files
+
 name: Print Modified Files
 
 on:
   push:
     branches:
     - test
-    workspace_dispatch:
+  workflow_dispatch:
 
 jobs:
   deploy:
