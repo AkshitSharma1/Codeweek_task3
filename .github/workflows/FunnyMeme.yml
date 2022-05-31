@@ -24,16 +24,5 @@ jobs:
           echo "${{ steps.memer.outputs.title }}"
           echo "${{ steps.memer.outputs.source }}"
 
-      - name: Create comment
-        uses: peter-evans/create-or-update-comment@v1.3.0
-        id: couc
-        with:
-          issue-number: ${{ github.event.number }}
-          body: |
-            Thanks for pushing
-
-            Please have a look at this 😝 :
-
-            > **${{ steps.memer.outputs.title }}**
-            ![meme](${{ steps.memer.outputs.meme }})
+      
            
