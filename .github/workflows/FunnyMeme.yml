@@ -1,9 +1,10 @@
 name: Funny Meme
 
-on: 
-  [pull_request]:
+on:
+  push:
+    branches:
+    - main
   workflow_dispatch:
-
 
 jobs:
   greeting:
@@ -29,9 +30,9 @@ jobs:
         with:
           issue-number: ${{ github.event.number }}
           body: |
-            Thanks for opening PR
+            Thanks for pushing
 
-            Pleas have a look at this 😝 :
+            Please have a look at this 😝 :
 
             > **${{ steps.memer.outputs.title }}**
             ![meme](${{ steps.memer.outputs.meme }})
